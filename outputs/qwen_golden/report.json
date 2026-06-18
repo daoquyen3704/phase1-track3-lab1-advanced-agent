@@ -1,0 +1,459 @@
+{
+  "meta": {
+    "dataset": "hotpot_golden.json",
+    "mode": "dashscope",
+    "num_records": 40,
+    "agents": [
+      "react",
+      "reflexion"
+    ]
+  },
+  "summary": {
+    "react": {
+      "count": 20,
+      "em": 0.95,
+      "avg_attempts": 1,
+      "avg_token_estimate": 409.15,
+      "avg_latency_ms": 3785.25
+    },
+    "reflexion": {
+      "count": 20,
+      "em": 1.0,
+      "avg_attempts": 1.05,
+      "avg_token_estimate": 463.85,
+      "avg_latency_ms": 4033.55
+    },
+    "delta_reflexion_minus_react": {
+      "em_abs": 0.05,
+      "attempts_abs": 0.05,
+      "tokens_abs": 54.7,
+      "latency_abs": 248.3
+    }
+  },
+  "failure_modes": {
+    "by_agent": {
+      "react": {
+        "none": 19,
+        "wrong_final_answer": 1
+      },
+      "reflexion": {
+        "none": 20
+      }
+    },
+    "by_mode": {
+      "none": 39,
+      "wrong_final_answer": 1
+    },
+    "none": 39,
+    "wrong_final_answer": 1
+  },
+  "examples": [
+    {
+      "qid": "gold1",
+      "agent_type": "react",
+      "gold_answer": "Beijing",
+      "predicted_answer": "Beijing",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold2",
+      "agent_type": "react",
+      "gold_answer": "classical",
+      "predicted_answer": "Romantic",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold3",
+      "agent_type": "react",
+      "gold_answer": "Peruvian sol",
+      "predicted_answer": "Peruvian sol",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold4",
+      "agent_type": "react",
+      "gold_answer": "Mediterranean Sea",
+      "predicted_answer": "Mediterranean Sea",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold5",
+      "agent_type": "react",
+      "gold_answer": "C",
+      "predicted_answer": "C",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold6",
+      "agent_type": "react",
+      "gold_answer": "Dutch, French, and German",
+      "predicted_answer": "Dutch, French, and German",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold7",
+      "agent_type": "react",
+      "gold_answer": "no Academy Award win",
+      "predicted_answer": "None",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold8",
+      "agent_type": "react",
+      "gold_answer": "Mars",
+      "predicted_answer": "Mars",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold9",
+      "agent_type": "react",
+      "gold_answer": "Mont Blanc",
+      "predicted_answer": "Mont Blanc",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold10",
+      "agent_type": "react",
+      "gold_answer": "uranium",
+      "predicted_answer": "Uranium",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold11",
+      "agent_type": "react",
+      "gold_answer": "Atlantic Ocean",
+      "predicted_answer": "Atlantic Ocean",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold12",
+      "agent_type": "react",
+      "gold_answer": "federal parliamentary democratic republic",
+      "predicted_answer": "federal parliamentary democratic republic",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold13",
+      "agent_type": "react",
+      "gold_answer": "approximately 66000",
+      "predicted_answer": "66,000",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold14",
+      "agent_type": "react",
+      "gold_answer": "Bab-el-Mandeb",
+      "predicted_answer": "Bab-el-Mandeb",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold15",
+      "agent_type": "react",
+      "gold_answer": "Neil Armstrong",
+      "predicted_answer": "Neil Armstrong",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold16",
+      "agent_type": "react",
+      "gold_answer": "football",
+      "predicted_answer": "Football",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold17",
+      "agent_type": "react",
+      "gold_answer": "Challenger Deep",
+      "predicted_answer": "Challenger Deep",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold18",
+      "agent_type": "react",
+      "gold_answer": "Canadian-American",
+      "predicted_answer": "Canadian-American",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold19",
+      "agent_type": "react",
+      "gold_answer": "Africa",
+      "predicted_answer": "Africa",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold20",
+      "agent_type": "react",
+      "gold_answer": "1951",
+      "predicted_answer": "1951",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold1",
+      "agent_type": "reflexion",
+      "gold_answer": "Beijing",
+      "predicted_answer": "Beijing",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold2",
+      "agent_type": "reflexion",
+      "gold_answer": "classical",
+      "predicted_answer": "classical",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "gold3",
+      "agent_type": "reflexion",
+      "gold_answer": "Peruvian sol",
+      "predicted_answer": "Peruvian sol",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold4",
+      "agent_type": "reflexion",
+      "gold_answer": "Mediterranean Sea",
+      "predicted_answer": "Mediterranean Sea",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold5",
+      "agent_type": "reflexion",
+      "gold_answer": "C",
+      "predicted_answer": "C",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold6",
+      "agent_type": "reflexion",
+      "gold_answer": "Dutch, French, and German",
+      "predicted_answer": "Dutch, French, and German",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold7",
+      "agent_type": "reflexion",
+      "gold_answer": "no Academy Award win",
+      "predicted_answer": "None",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold8",
+      "agent_type": "reflexion",
+      "gold_answer": "Mars",
+      "predicted_answer": "Mars",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold9",
+      "agent_type": "reflexion",
+      "gold_answer": "Mont Blanc",
+      "predicted_answer": "Mont Blanc",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold10",
+      "agent_type": "reflexion",
+      "gold_answer": "uranium",
+      "predicted_answer": "Uranium",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold11",
+      "agent_type": "reflexion",
+      "gold_answer": "Atlantic Ocean",
+      "predicted_answer": "Atlantic Ocean",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold12",
+      "agent_type": "reflexion",
+      "gold_answer": "federal parliamentary democratic republic",
+      "predicted_answer": "federal parliamentary democratic republic",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold13",
+      "agent_type": "reflexion",
+      "gold_answer": "approximately 66000",
+      "predicted_answer": "66,000",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold14",
+      "agent_type": "reflexion",
+      "gold_answer": "Bab-el-Mandeb",
+      "predicted_answer": "Bab-el-Mandeb",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold15",
+      "agent_type": "reflexion",
+      "gold_answer": "Neil Armstrong",
+      "predicted_answer": "Neil Armstrong",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold16",
+      "agent_type": "reflexion",
+      "gold_answer": "football",
+      "predicted_answer": "Football",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold17",
+      "agent_type": "reflexion",
+      "gold_answer": "Challenger Deep",
+      "predicted_answer": "Challenger Deep",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold18",
+      "agent_type": "reflexion",
+      "gold_answer": "Canadian-American",
+      "predicted_answer": "Canadian-American",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold19",
+      "agent_type": "reflexion",
+      "gold_answer": "Africa",
+      "predicted_answer": "Africa",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold20",
+      "agent_type": "reflexion",
+      "gold_answer": "1951",
+      "predicted_answer": "1951",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    }
+  ],
+  "extensions": [
+    "structured_evaluator",
+    "reflection_memory",
+    "benchmark_report_json",
+    "mock_mode_for_autograding"
+  ],
+  "discussion": "Reflexion helps when the first attempt stops after the first hop or drifts to a wrong second-hop entity. The tradeoff is higher attempts, token cost, and latency. In a real report, students should explain when the reflection memory was useful, which failure modes remained, and whether evaluator quality limited gains."
+}
