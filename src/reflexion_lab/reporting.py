@@ -17,10 +17,16 @@ def summarize(records: list[RunRecord]) -> dict:
     return summary
 
 def failure_breakdown(records: list[RunRecord]) -> dict:
-    grouped: dict[str, Counter] = defaultdict(Counter)
+    by_agent: dict[str, Counter] = defaultdict(Counter)
+    by_mode: Counter = Counter()
     for record in records:
-        grouped[record.agent_type][record.failure_mode] += 1
-    return {agent: dict(counter) for agent, counter in grouped.items()}
+        by_agent[record.agent_type][record.failure_mode] += 1
+        by_mode[record.failure_mode] += 1
+    return {
+        "by_agent": {agent: dict(counter) for agent, counter in by_agent.items()},
+        "by_mode": dict(by_mode),
+        **dict(by_mode),
+    }
 
 def build_report(records: list[RunRecord], dataset_name: str, mode: str = "mock") -> ReportPayload:
     examples = [{"qid": r.qid, "agent_type": r.agent_type, "gold_answer": r.gold_answer, "predicted_answer": r.predicted_answer, "is_correct": r.is_correct, "attempts": r.attempts, "failure_mode": r.failure_mode, "reflection_count": len(r.reflections)} for r in records]
